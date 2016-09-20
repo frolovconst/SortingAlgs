@@ -10,9 +10,19 @@ public class Main {
         for(int i = 0; i < N; i++){
             array[i] = (int) (Math.random()*100);
         }
-        InsertionSort.Sort(array);
+        System.out.println("Before");
         for(int i = 0; i < N; i++){
             System.out.println(i+1 + ".\t" + array[i]);
         }
+        QuockS.Sort(array);
+        System.out.println("After");
+        for(int i = 0; i < N; i++){
+            System.out.println(i+1 + ".\t" + array[i]);
+        }
+        for(int i=1; i < N; i++){
+            if(array[i] < array[i-1])
+                System.out.println("error");
+        }
+
     }
 }
